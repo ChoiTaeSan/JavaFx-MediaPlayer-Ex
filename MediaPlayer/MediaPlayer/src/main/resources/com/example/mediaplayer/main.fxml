@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mediaplayer.MainController">
+   <center>
+      <StackPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="iv" fitWidth="600.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../media/image.jpg" />
+               </image>
+            </ImageView>
+            <MediaView fx:id="mv" fitWidth="596.0" />
+         </children>
+      </StackPane>
+   </center>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+   <bottom>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="100.0" spacing="2.0">
+         <children>
+            <HBox prefHeight="14.0" prefWidth="200.0" spacing="2.0">
+               <children>
+                  <Slider fx:id="pbar" prefWidth="550.0" />
+                  <Slider fx:id="vbar" prefWidth="80.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" spacing="2.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="550.0" spacing="2.0">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Button fx:id="btn_play" mnemonicParsing="false" prefWidth="50.0" text="play" />
+                              <Button fx:id="btn_pause" mnemonicParsing="false" prefWidth="50.0" text="pause" visible="false" />
+                           </children></StackPane>
+                        <Button fx:id="btn_stop" mnemonicParsing="false" prefWidth="50.0" text="stop" />
+                        <Label fx:id="lb_currenttime" text="00:00:00">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text=" / " />
+                        <Label fx:id="lb_totaltime" text="00:00:00" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="btn_open" mnemonicParsing="false" text="open" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
